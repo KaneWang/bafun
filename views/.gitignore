@@ -1,6 +1,3 @@
-.ebextensions/
-.idea/
-
 # Logs
 logs
 *.log
