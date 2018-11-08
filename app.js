@@ -39,7 +39,9 @@ if (cluster.isMaster) {
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.use(bodyParser.urlencoded({extended:false}));
-
+    app.use(express.static('static'));
+    var path = require('path');
+    app.use(express.static(path.join(__dirname, 'static')));
     app.get('/', function(req, res) {
         res.render('index', {
             static_path: 'static',
